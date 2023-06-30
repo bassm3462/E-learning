@@ -1,0 +1,30 @@
+<?php
+
+include ("conect_database.php ");
+
+if ($_SERVER["REQUEST_METHOD"]="POST"){
+    if(isset($_POST["save"])){
+
+
+$fileType = $_FILES["file"]["type"];
+$fileName = $_FILES["file"]["name"];
+$file = $_FILES["file"]["tmp_name"];
+$chapter=$_POST["fname"];
+$title=$_POST[ "Tname"];
+
+move_uploaded_file($file,"Upload/".$fileName);
+$position="Upload/".$fileName;
+$upload_file=$conn->prepare("INSERT INTO lessons(chapter,title ,FILE_TYPE,FILE ,POSITION)VALUE(:chapter,:title,:FILE_TYPE,:FILE,:POSITION)");
+$upload_file->bindParam(":FILE_TYPE",$fileType);
+$upload_file->bindParam(":FILE",$fileName);
+$upload_file->bindParam(":chapter",$chapter);
+$upload_file->bindParam(":title",$title);
+$upload_file->bindParam(":POSITION",$position);
+if($upload_file->execute()){
+    echo '<script> alert("The file has been uploaded successfully")</script>';
+}
+else{
+    echo '<div class="alert alert-danger" role="alert">>invald</div>';
+}
+}}
+?>

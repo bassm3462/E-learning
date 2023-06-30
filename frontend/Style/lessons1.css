@@ -1,0 +1,17 @@
+.display_lessons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+.title_lessons {
+    color: #757575;
+
+}
+
+.dsiplay_action {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

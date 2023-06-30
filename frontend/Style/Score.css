@@ -1,0 +1,53 @@
+
+.information_box{
+
+    height:100vh ;
+    width: 100vw;
+    background-color:#f9f9f9;
+position: relative;
+}
+.box_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #337ab7;
+    /* padding: 20px; */
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.box_info .student_profile{
+    background-color: #2196f3;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 80px;
+    text-align: center;
+
+}
+.box_info .student_profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.information_box .header_score{
+    margin: 0px;
+    text-align: center;
+padding-top:20px;
+
+/* background-color:; */
+color: #353535;
+}
+.student_profile h2{
+    margin: 0px;
+    color: #fff;
+padding-bottom:20px;
+
+}
+.box_info .table_score{
+    /* padding: 10px; */
+}
+ .table_score table , tr , td ,th  {
+    border: 1px solid #337ab7;
+    padding: 2em;
+}

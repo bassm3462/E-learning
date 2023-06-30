@@ -1,0 +1,115 @@
+/* start header */
+/*  */
+
+
+
+
+table {
+    /* width: 100%; */
+    /* margin: auto; */
+margin-top: 50px;
+} 
+
+.lessons .container{
+    position: relative;
+
+}
+.lessons h1{
+
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 60px;
+  background-color: #49c5f6;
+  transition: 0.7s;
+} 
+ .lessons form{  
+  width: 50%;
+margin: auto;
+margin-top: 40px;
+
+}
+
+
+.lessons input {
+    margin: 5px;
+    
+    border: none;
+  border-bottom:1px solid black ;
+
+}
+
+.lessons input:focus {
+    outline: none;
+
+}
+
+
+#upload {
+    border: none;
+    margin: 20px 20px 20px 0px;
+}
+@media (max-width:768px) {
+    .lessons{
+        flex-direction: column;
+    }
+    
+}
+.add{
+    transition: 0.6s;
+}
+.add:hover {
+transform: scale(1.3);
+}
+#box{
+    text-align: end;
+}
+#lessons,.edit{
+    border: 1px solid black;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    top: 20px;
+    background-color:#FFFFFF;
+    border-radius: 50px;
+    border-width: 0;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+   
+}
+#lessons{
+    display: none;
+}
+
+form{
+    padding-bottom: 10px;
+}
+
+
+.edit{
+    padding: 20px;
+}
+.Edit_hder{
+    text-align: center;
+    background-color: #49c5f6;
+    border-radius: 25px;
+    
+}
+.dsiplay_buttom{
+        display: flex;
+        justify-content: space-around;
+
+}
+.add_quize{
+    margin-top: 20px;
+}
+.add_quize button{
+    margin: 0px;
+}
+.add_quize a{
+    transition: 0.6s;
+}
+.add_quize a:hover{
+    transform: scale(1.3);
+}

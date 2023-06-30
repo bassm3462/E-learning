@@ -1,0 +1,31 @@
+.main_box{
+  display: flex;
+  justify-content: center;
+}
+.box{
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+.box_branch{
+  margin: 20px;
+  
+}
+.box_branch p{
+  text-align: center;
+  padding-top:10px ;
+}
+.box_branch .box h2{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.box_branch .box1{
+  background: -webkit-linear-gradient(#eee, #333);
+}
+.box_branch .box2{
+  background: -webkit-linear-gradient(#eee, #33333359);;
+}.box_branch .box3{
+  background: -webkit-linear-gradient(#eeeeeea3, #333333bf);;
+}

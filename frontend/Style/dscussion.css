@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.groub_course{
+   position: relative;
+    height: 100vh;
+
+}
+.list-group{
+    position: absolute;
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+    width: 600px;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+}
+.img_user{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+}
+.dscussion_list{
+margin-top: 50px;
+}
+.dsiplay_user{
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid black ;
+    padding: 10px;
+    background-color:#EAEBED ;
+}
+.fa-message , .fa-user-slash{
+    font-size: 20px;
+}
+.main{
+    position: relative;
+    background-color:#EAEBED;
+    height: 100vh;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.main_containr{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.descussion_box{
+    /* position: relative; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    padding-top: 20px;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+    max-width: 600px;
+}
+.descussion_box .header{
+    text-align: center;
+
+}
+.section_ds button {
+    margin-top: 20px;
+   
+}
+.information_box_message{
+    /* width: 100vw; */
+    height: 100vh;
+    background-color:#f9f9f9;
+position: relative;
+}
+.massge_dsiplay{
+
+display: block;
+}
+.box_massge{
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+}
+
+
+.scorall{
+    width: 600px;
+    max-width: 600px;
+    height:calc( 100vh - 396px);
+    /* border: 1px solid black; */
+    overflow: auto;
+    margin: auto;
+}
+.po_meassge{
+}
+.dsiplay_message{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2196f3;
+    margin: 10px;
+    border-radius: 25px;
+    padding: 10px;
+       
+}
+.dsiplay_message p , a{
+    color: white;
+}
+.reply{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    /* color: white; */
+    font-size: 15px;
+  
+    
+}
+.reply span{
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.box_information{
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #337ab7;
+    /* padding: 20px; */
+    border-radius: 20px;
+    overflow: hidden;}
+.reply_meassg{
+    background-color: royalblue;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
+}
