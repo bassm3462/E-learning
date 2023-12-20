@@ -19,10 +19,7 @@ if(isset($_POST['submit'])){
 // $select="SELECT * FROM `user_form` WHERE email = $email AND password = $pass";
 // $result=mysqli_query($conn,$select);
 // $count=mysqli_num_rows($result);
-
-   if($count->rowCount() > 0){
-
-  
+//    if($row->rowCount() > 0){
 if($row['ACTIVTION']=="1"){
     if($row['user_type'] == 'teacher'){
 
@@ -55,7 +52,7 @@ else{
    }
    
 
-}    }
+}    
 else{
     $message[]= 'incorrect email or password!';
 
@@ -74,7 +71,7 @@ else{
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         type="text/css" media="all" />
-<!-- <link rel="stylesheet" href="style/Profile.css"> -->
+    <!-- <link rel="stylesheet" href="style/Profile.css"> -->
     <?php include "header.php";?>
 
     <!-- title the pge -->
@@ -82,27 +79,27 @@ else{
 </head>
 
 <body>
-<?php
+    <?php
    if(isset($message)){
       foreach($message as $message){
          ?>
-         <div class="message">
-            <span><i class="fa-solid fa-circle-exclamation"></i><?php echo $message ;?></span>
-            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-         </div>
-         <?php
+    <div class="message">
+        <span><i class="fa-solid fa-circle-exclamation"></i><?php echo $message ;?></span>
+        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+    </div>
+    <?php
       }
    }
 ?>
-<?php
+    <?php
    if(isset($success)){
       foreach($success as $success){
          ?>
-         <div class="success">
-            <span><?php echo $success ;?></span>
-            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-         </div>
-         <?php
+    <div class="success">
+        <span><?php echo $success ;?></span>
+        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+    </div>
+    <?php
       }
    }
 ?>
@@ -141,14 +138,11 @@ else{
                                             in</input>
                                             <a class="text-muted" href="forgot_password.php">Forgot password?</a>
                                         </div>
-
                                         <div class="d-flex align-items-center justify-content-center pb-4">
                                             <p class="mb-0 me-2">Don't have an account?</p>
                                             <a href="register.php" class="btn btn-outline-danger">Create new</a>
                                         </div>
-
                                     </form>
-
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">

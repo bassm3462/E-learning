@@ -2,36 +2,33 @@
 
 <main class="container">
 
-<?php
+  <?php
 
-if(isset($_GET['code'])){
+  if (isset($_GET['code'])) {
 
-include "conect_database.php";
-$CODE=$_GET['code'];
-$checkCode = $conn->prepare("SELECT SECURITY_CODE FROM user_form WHERE SECURITY_CODE = :SECURITY_CODE");
-$checkCode->bindParam("SECURITY_CODE",$CODE);
-$checkCode->execute();
-if($checkCode->rowCount()>0){
-   
-$update = $conn->prepare("UPDATE user_form SET SECURITY_CODE = :NEWSECURITY_CODE ,
+    include "conect_database.php";
+    $CODE = $_GET['code'];
+    $checkCode = $conn->prepare("SELECT SECURITY_CODE FROM user_form WHERE SECURITY_CODE = :SECURITY_CODE");
+    $checkCode->bindParam("SECURITY_CODE", $CODE);
+    $checkCode->execute();
+    if ($checkCode->rowCount() > 0) {
+
+      $update = $conn->prepare("UPDATE user_form SET SECURITY_CODE = :NEWSECURITY_CODE ,
  ACTIVTION=true WHERE SECURITY_CODE = :SECURITY_CODE");
-  $securityCode = md5(rand());
-$update->bindParam("NEWSECURITY_CODE",$securityCode);
-$update->bindParam("SECURITY_CODE",$CODE);
-if($update->execute()){
-    echo '<div class="alert alert-success" role="alert">
+      $securityCode = md5(rand());
+      $update->bindParam("NEWSECURITY_CODE", $securityCode);
+      $update->bindParam("SECURITY_CODE", $CODE);
+      if ($update->execute()) {
+        echo '<div class="alert alert-success" role="alert">
     The account has been verified successfully
   </div>';
-  echo '<a class="btn btn-warning" href="index.php">log in</a>';
-}
-}else{
-    echo '<div class="alert alert-danger" role="alert">
+        echo '<a class="btn btn-warning" href="index.php">log in</a>';
+      }
+    } else {
+      echo '<div class="alert alert-danger" role="alert">
     This code is no longer valid
   </div>';
-}
-
-}
-?>
-
-  
+    }
+  }
+  ?>
 </main>
